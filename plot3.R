@@ -23,9 +23,10 @@ plot3 <- function() {
         power$Sub_metering_3 <- as.numeric(as.character(power$Sub_metering_3))
 
         ## Plot the data
+        par(mfrow=c(1,1), bg = "white")
         ## Start with plot of the Sub_metering_1 in Black
         plot(power$date, power$Sub_metering_1, main = NULL, type = "l", xlab = " ", 
-             ylab = "Energy sub metering", col = "black")
+             ylab = "Energy sub metering", col = "black", bg = "white")
         ## Add Sub_metering_2 data in Red
         lines(power$date, power$Sub_metering_2, type = "l", col = "red")
         ## Add Sub_metering_3 data in Blue

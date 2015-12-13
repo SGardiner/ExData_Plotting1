@@ -1,4 +1,4 @@
-## Plot1.R
+## Plot1.R 
 
 library(dplyr)
 
@@ -21,9 +21,10 @@ plot1 <- function() {
         power$Global_active_power <- as.numeric(as.character(power$Global_active_power))
 
         ## Plot the data - a histogram of global active power
+        par(mfrow=c(1,1), bg = "white")
         ## plot the histogram with the right xlabel, color and title
         hist(power$Global_active_power, xlab = "Global Active Power (killowatts)", 
-             col = "red", main = "Global Active Power", bg = "transparent")
+             col = "red", main = "Global Active Power", bg = "white")
         
         ## copy the screen to a png file
         dev.copy(png, file = "plot1.png")

@@ -21,9 +21,10 @@ plot2 <- function() {
         power$Global_active_power <- as.numeric(as.character(power$Global_active_power))
 
         ## Plot the data
+        par(mfrow=c(1,1), bg = "white")
         ## Line graph, no main title
         plot(power$date, power$Global_active_power, main = NULL, type = "l", 
-             xlab = " ", ylab = "Global Active Power (kilowatts)")
+             xlab = " ", ylab = "Global Active Power (kilowatts)", bg = "white")
         
         ## copy the screen to a png file
         dev.copy(png, file = "plot2.png")

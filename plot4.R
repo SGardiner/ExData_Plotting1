@@ -29,8 +29,8 @@ plot4 <- function() {
         power$Global_reactive_power <- as.numeric(as.character(power$Global_reactive_power))
 
         ## Plot the data
-        ## Set the 2x2 matrix of plots
-        par(mfrow = c(2,2))
+        ## Set the 2x2 matrix of plots, background to white
+        par(mfrow=c(2,2), bg = "white")
 
         ## Upper left: repeat of plot 2 (Global active power)
         plot(power$date, power$Global_active_power, main = NULL, type = "l", 
